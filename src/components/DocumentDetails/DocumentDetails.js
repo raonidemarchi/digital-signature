@@ -7,7 +7,7 @@ import './pdf-viewer.scss';
 
 import signatureIcon from '../../icons/signature-solid.svg';
 import paperPlane from '../../icons/paper-plane-solid.svg';
-import eraserIcon from '../../icons/eraser-solid.svg';
+import undoIcon from '../../icons/undo-solid.svg';
 import pdf from '../../pdf/example.pdf';
 
 
@@ -107,7 +107,7 @@ function DocumentDetails() {
         signed ?
           <div>
             <div className={styles.fabClear} title="Apagar assinatura" onClick={clearSignaturePad}>
-              <img className={styles.buttonIcon} src={eraserIcon} alt="Eraser icon" />
+              <img className={styles.buttonIcon} src={undoIcon} alt="undo icon" />
             </div>
 
             <div className={styles.fabSend} title="Enviar proposta assinada" onClick={sendSignedDocument}>

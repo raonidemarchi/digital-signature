@@ -16,8 +16,11 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 function DocumentDetails() {
   const [pagesCount, setPagesCount] = useState(0);
   const [signed, setSigned] = useState(false);
+  const documentTitle = 'MIF998 Engenharia de Processos - TOTVS - Sugestão de Melhoria';
   let signaturePad = {};
   let signaturePage = {};
+
+  document.title = documentTitle;
 
   window.onresize = function() {
     if (signed) {
@@ -53,12 +56,7 @@ function DocumentDetails() {
     fetch('https://pdfgen.catini.org', {
         method: 'post',
         body: JSON.stringify({
-          html: `<div style="width: 100%">
-          <div style="margin: 0 auto">
-            <img src="${signaturePad.getTrimmedCanvas().toDataURL('image/png')}" width="400" />
-          <div>
-          </div>
-          `,
+          html: `<img src="${signaturePad.getTrimmedCanvas().toDataURL('image/png')}" width="400" />`,
           filename: 'Raoni'
         })
       })
@@ -72,7 +70,7 @@ function DocumentDetails() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        MIF998 Engenharia de Processos - TOTVS - Sugestão de Melhoria - {pagesCount} páginas
+        {documentTitle} - {pagesCount} páginas
       </div>
     
       <div className={styles.documentContainerWrapper}>

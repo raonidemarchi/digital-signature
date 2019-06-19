@@ -6,7 +6,7 @@ const DocumentDetails = React.lazy(() => import('./components/DocumentDetails/Do
 
 const Routes = () => (
   <Router>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <Switch>
         <Route exact path="/" component={props => <DocumentsList {...props} />} />
         <Route exact path="/document/:hash" component={props => <DocumentDetails {...props} />} />

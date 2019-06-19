@@ -2,73 +2,163 @@
   display: flex;
 
   .sideMenu {
-    padding: 16px;
-    width: 280px;
+    min-width: 260px;
+    position: fixed;
+
+    .createButtonContainer {
+      padding: 8px 20px;
+
+      .createButton {
+        color: #fff;
+        justify-content: center;
+        height: 56px;
+        letter-spacing: 0.125rem;
+        width: 100px;
+        display: flex;
+        font-weight: bold;
+        padding: 0 20px;
+        align-items: center;
+        border-radius: 56px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        background-image: linear-gradient(to right, #56CCF2, #2F80ED);
+    
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .headerSideMenuContainer {
+      padding: 8px 20px;
+
+      .headerSideMenu {
+        display: flex;
+        align-items: center;
+        height: 56px;
+      }
+    }
+
+    .list {
+      padding-top: 8px;
+      
+      .listItem {
+        padding: 12px 0 12px 20px;
+        border-radius: 0 50px 50px 0;
+        font-weight: 500;
+        user-select: none;
+
+        &.active {
+          background-color: #e1f5fe;
+          color: #0288d1;
+          font-weight: bold;
+
+          &:hover {
+            background-color: #e1f5fe;
+          }
+        }
+
+        &:hover {
+          background-color: #f5f5f5;
+          cursor: pointer;
+        }
+      }
+    }
   }
 
   .listContainer {
-    padding: 8px 16px;
     width: 100%;
-  }
+    padding: 0 32px 0 300px;
 
-  .searchInputContainer {
-    padding-bottom: 8px;
-
-    .searchInput {
-      padding: 16px 20px;
-      font-size: 16px;
-      border-radius: 6px;
-      width: 100%;
-      border: none;
-      background-color: #eee;
-    }
-  }
-
-  .table {
-    text-align: left;
-    width: 100%;
-    border-collapse: collapse;
-
-    .signerImage {
-      display: inline-flex;
-      width: 36px;
-      height: 36px;
-      background-color: #0288d1;
-      justify-content: center;
-      align-items: center;
-      font-size: 20px;
-      border-radius: 50%;
-      font-weight: bold;
-      color: #fff;
+    .header {
+      padding: 8px 0 0;
+      position: fixed;
+      width: calc(100% - 332px);
+      background-color: #fff;
     }
 
-    .signerOrganization {
-      display: inline-flex;
-      height: 36px;
-      vertical-align: top;
-      align-items: center;
-      padding-left: 16px;
+    .searchInputContainer {
+      padding-bottom: 16px;
+      display: flex;
+  
+      .buttonLabel {
+        display: flex;
+      }
+  
+      .searchIcon {
+        width: 18px;
+        height: 56px;
+        background-color: #f5f5f5;
+        padding: 0 24px;
+        border-radius: 6px 0 0 6px;
+        
+        &:hover {
+          cursor: pointer;
+        }
+      }
+  
+      .searchInput {
+        padding-right: 16px;
+        height: 56px;
+        font-size: 16px;
+        max-width: 700px;
+        border-radius: 0 6px 6px 0;
+        width: 100%;
+        border: none;
+        background-color: #f5f5f5;
+  
+        &:focus {
+          outline: none;
+        }
+      }
     }
 
-    th, td {
-      padding: 16px;
-      width: 16%;
-    }
-
-    tbody tr:hover {
-      background-color: #f5f5f5;
-      cursor: pointer;
-    }
-
-    .overflow {
-      max-width: 0;
-      overflow-x: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-
-    th {
+    .thead  {
+      display: flex;
       border-bottom: 1px solid #e0e0e0;
+
+      div {
+        padding: 16px;
+        width: 100%;
+        font-weight: bold;
+      }
+    }
+
+    .table {
+      text-align: left;
+      width: 100%;
+      margin-top: 133px;
+      border-collapse: collapse;
+
+      tbody tr:hover {
+        background-color: #f5f5f5;
+        cursor: pointer;
+      }
+  
+      .initialsImage {
+        display: inline-flex;
+        width: 36px;
+        height: 36px;
+        background-color: #0288d1;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        border-radius: 50%;
+        font-weight: bold;
+        color: #fff;
+      }
+  
+      .signerOrganization {
+        display: inline-flex;
+        height: 36px;
+        vertical-align: top;
+        align-items: center;
+        padding-left: 16px;
+      }
+  
+      td {
+        padding: 16px;
+        width: 16%;
+      }
     }
   }
 }

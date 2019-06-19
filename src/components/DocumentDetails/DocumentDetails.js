@@ -104,16 +104,16 @@ function DocumentDetails() {
       { 
         signed ?
           <div>
-            <div className={styles.fabClear} title="Apagar assinatura" onClick={clearSignaturePad}>
+            <div className={styles.fabClear} title="Apagar assinatura" onClick={clearSignaturePad} role="button">
               <img className={styles.buttonIcon} src={undoIcon} alt="undo icon" />
             </div>
 
-            <div className={styles.fabSend} title="Enviar proposta assinada" onClick={sendSignedDocument}>
+            <div className={styles.fabSend} title="Enviar proposta assinada" onClick={sendSignedDocument} role="button">
               <img className={styles.buttonIcon} src={paperPlane} alt="Paper plane icon" /> Enviar
             </div>
           </div>
         :
-          <div className={styles.fabGoSignature} onClick={goToSignatureArea}>
+          <div className={styles.fabGoSignature} title="Ir para assinatura" onClick={goToSignatureArea} role="button">
             <img className={styles.buttonIcon} src={signatureIcon} alt="Signature icon" /> Ir para assinatura
           </div>
       }

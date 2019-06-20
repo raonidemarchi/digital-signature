@@ -8,9 +8,9 @@ const Routes = () => (
   <Router>
     <Suspense fallback={<div></div>}>
       <Switch>
-        <Route exact path="/" component={props => <DocumentsList {...props} />} />
-        <Route exact path="/document/:hash" component={props => <DocumentDetails {...props} />} />
-        <Redirect from="*" to="/" />
+        <Route exact path="/documents/:menu" component={props => <DocumentsList {...props} />} />
+        <Route exact path="/document/detail/:hash" component={props => <DocumentDetails {...props} />} />
+        <Redirect from="*" to="/documents/all" />
       </Switch>
     </Suspense>
   </Router>

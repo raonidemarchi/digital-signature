@@ -1,109 +1,154 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styles from './DocumentsList.module.scss';
 import searchIconSolid from '../../icons/search-solid.svg';
 
-function DocumentsList() {
-  const [activeMenu, setActiveMenu] = useState('allDocs');
-  const APIData = [
-    {
-      id: 1,
-      empresa: 'Totvs',
-      assinante: 'Laércio Cosentino',
-      link: 'http://localhost:3000/document/asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
-      dataCadastro: '2019-06-17',
-      dataAssinatura: null
-    },
-    {
-      id: 2,
-      empresa: 'It\'s Informov',
-      assinante: 'Cecílio Peres',
-      link: 'http://localhost:3000/document/asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
-      dataCadastro: '2019-06-10',
-      dataAssinatura: '2019-06-16'
-    },
-    {
-      id: 3,
-      empresa: 'Grupo iv2',
-      assinante: 'Vlamir Ienne',
-      link: 'http://localhost:3000/document/asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
-      dataCadastro: '2019-06-17',
-      dataAssinatura: null
-    },
-    {
-      id: 4,
-      empresa: 'Grupo iv2',
-      assinante: 'Vlamir Ienne',
-      link: 'http://localhost:3000/document/asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
-      dataCadastro: '2019-06-17',
-      dataAssinatura: null
-    },
-    {
-      id: 5,
-      empresa: 'Grupo iv2',
-      assinante: 'Vlamir Ienne',
-      link: 'http://localhost:3000/document/asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
-      dataCadastro: '2019-06-17',
-      dataAssinatura: null
-    },
-    {
-      id: 6,
-      empresa: 'Grupo iv2',
-      assinante: 'Vlamir Ienne',
-      link: 'http://localhost:3000/document/asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
-      dataCadastro: '2019-06-17',
-      dataAssinatura: null
-    },
-    {
-      id: 7,
-      empresa: 'Grupo iv2',
-      assinante: 'Vlamir Ienne',
-      link: 'http://localhost:3000/document/asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
-      dataCadastro: '2019-06-17',
-      dataAssinatura: null
-    },
-    {
-      id: 8,
-      empresa: 'Grupo iv2',
-      assinante: 'Vlamir Ienne',
-      link: 'http://localhost:3000/document/asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
-      dataCadastro: '2019-06-17',
-      dataAssinatura: null
-    },
-    {
-      id: 9,
-      empresa: 'Grupo iv2',
-      assinante: 'Vlamir Ienne',
-      link: 'http://localhost:3000/document/asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
-      dataCadastro: '2019-06-17',
-      dataAssinatura: null
-    },
-    {
-      id: 10,
-      empresa: 'Grupo iv2',
-      assinante: 'Vlamir Ienne',
-      link: 'http://localhost:3000/document/asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
-      dataCadastro: '2019-06-17',
-      dataAssinatura: null
-    },
-    {
-      id: 11,
-      empresa: 'Grupo iv2',
-      assinante: 'Vlamir Ienne',
-      link: 'http://localhost:3000/document/asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
-      dataCadastro: '2019-06-17',
-      dataAssinatura: null
-    },
+function DocumentsList(props) {
+  const [activeMenu, setActiveMenu] = useState(props.match.params.menu);
+  const [results, setResults] = useState([]);
+  
+  useEffect(() => {
+    const APIData = [
+      {
+        empresa: 'Totvs',
+        assinante: 'Laércio Cosentino',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-12',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'It\'s Informov',
+        assinante: 'Cecílio Peres',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-10',
+        dataAssinatura: '2019-06-16'
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+      {
+        empresa: 'Grupo iv2',
+        assinante: 'Vlamir Ienne',
+        link: 'asdA485790DD4142SA5QWdWQDdwqwqdWQDQWqwewqe123124ASDwq122135t',
+        dataCadastro: '2019-06-17',
+        dataAssinatura: null
+      },
+    ];
 
-  ]
+    setResults(APIData);
+  }, []);
 
-  const openDocument = (documentLink) => {
-    window.open(documentLink);
+  useEffect(() => {
+    const filterResults = menu => {
+      switch(activeMenu) {
+        case `all`: 
+          console.log('all');
+          break;
+
+        case `unsigned`: 
+          console.log('unsigned');
+          break;
+
+        case `signed`: 
+          console.log('signed');
+          break;
+
+        default:
+          break;
+      }
+    }
+
+    filterResults(activeMenu);
+    
+    window.history.pushState(``, ``, `/documents/${activeMenu}`);
+  }, [activeMenu]);
+
+  const openDocument = documentLink => {
+    window.open(`${window.location.origin}/document/detail/${documentLink}`);
   }
 
-  const changeMenu = (menu) => {
-    setActiveMenu(menu)
-  }
+  // const searchDocuments = query => { }
 
   return (
     <div className={styles.container}>
@@ -121,13 +166,13 @@ function DocumentsList() {
         </div>
 
         <div className={styles.list}>
-          <div className={[styles.listItem, activeMenu === 'allDocs' && styles.active].join(' ')} onClick={() => changeMenu('allDocs')}>
+          <div className={[styles.listItem, activeMenu === `all` && styles.active].join(` `)} onClick={() => setActiveMenu(`all`)}>
             Todos os documentos
           </div>
-          <div className={[styles.listItem, activeMenu === 'unsigned' && styles.active].join(' ')} onClick={() => changeMenu('unsigned')}>
+          <div className={[styles.listItem, activeMenu === `unsigned` && styles.active].join(` `)} onClick={() => setActiveMenu(`unsigned`)}>
             Não assinados
           </div>
-          <div className={[styles.listItem, activeMenu === 'signed' && styles.active].join(' ')} onClick={() => changeMenu('signed')}>
+          <div className={[styles.listItem, activeMenu === `signed` && styles.active].join(` `)} onClick={() => setActiveMenu(`signed`)}>
             Assinados
           </div>
         </div>
@@ -140,7 +185,7 @@ function DocumentsList() {
               <img src={searchIconSolid} className={styles.searchIcon} alt="Ícone pesquisar" />
             </label>
 
-            <input id="search" type="search" className={styles.searchInput} placeholder="Pesquisar" />
+            <input id="search" type="search" className={styles.searchInput} placeholder="Pesquisar" autoComplete="off" />
           </div>
 
           <div className={styles.thead}>
@@ -154,17 +199,17 @@ function DocumentsList() {
         <table className={styles.table}>
           <tbody>
             {
-              APIData.map((value, index) => {
-                return <tr key={value.id} onClick={() => openDocument(value.link)}>
+              results.map((value, index) =>
+                <tr key={index} onClick={() => openDocument(value.link)}>
                   <td>
                     <div className={styles.initialsImage}>{value.empresa.substr(0, 1)}</div>
                     <div className={styles.signerOrganization}>{value.empresa}</div>
                   </td>
                   <td>{value.assinante}</td>
-                  <td>{new Date(value.dataCadastro).getDate()}</td>
-                  <td>{value.dataAssinatura ? 'Assinado em ' + new Date(value.dataAssinatura).toLocaleDateString() : 'Não assinado'}</td>
+                  <td>{new Date(value.dataCadastro).toLocaleDateString()}</td>
+                  <td>{value.dataAssinatura ? `Assinado em ${new Date(value.dataAssinatura).toLocaleDateString()}` : `Não assinado`}</td>
                 </tr>
-              })
+              )
             }
           </tbody>
         </table>

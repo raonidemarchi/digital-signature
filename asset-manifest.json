@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/digital-signature/static/css/main.ebeb28eb.chunk.css",
+    "main.js": "/digital-signature/static/js/main.3f7d2983.chunk.js",
+    "main.js.map": "/digital-signature/static/js/main.3f7d2983.chunk.js.map",
+    "runtime~main.js": "/digital-signature/static/js/runtime~main.d2104906.js",
+    "runtime~main.js.map": "/digital-signature/static/js/runtime~main.d2104906.js.map",
+    "static/js/2.b99da797.chunk.js": "/digital-signature/static/js/2.b99da797.chunk.js",
+    "static/js/2.b99da797.chunk.js.map": "/digital-signature/static/js/2.b99da797.chunk.js.map",
+    "static/js/3.e10e7ceb.chunk.js": "/digital-signature/static/js/3.e10e7ceb.chunk.js",
+    "static/js/3.e10e7ceb.chunk.js.map": "/digital-signature/static/js/3.e10e7ceb.chunk.js.map",
+    "static/css/4.6dc12337.chunk.css": "/digital-signature/static/css/4.6dc12337.chunk.css",
+    "static/js/4.7c24febf.chunk.js": "/digital-signature/static/js/4.7c24febf.chunk.js",
+    "static/js/4.7c24febf.chunk.js.map": "/digital-signature/static/js/4.7c24febf.chunk.js.map",
+    "static/css/5.d2d14d6f.chunk.css": "/digital-signature/static/css/5.d2d14d6f.chunk.css",
+    "static/js/5.947285fa.chunk.js": "/digital-signature/static/js/5.947285fa.chunk.js",
+    "static/js/5.947285fa.chunk.js.map": "/digital-signature/static/js/5.947285fa.chunk.js.map",
+    "index.html": "/digital-signature/index.html",
+    "precache-manifest.f408520136bf675b0645d68fdd7e87cb.js": "/digital-signature/precache-manifest.f408520136bf675b0645d68fdd7e87cb.js",
+    "service-worker.js": "/digital-signature/service-worker.js",
+    "static/css/4.6dc12337.chunk.css.map": "/digital-signature/static/css/4.6dc12337.chunk.css.map",
+    "static/css/5.d2d14d6f.chunk.css.map": "/digital-signature/static/css/5.d2d14d6f.chunk.css.map",
+    "static/css/main.ebeb28eb.chunk.css.map": "/digital-signature/static/css/main.ebeb28eb.chunk.css.map",
+    "static/media/example.pdf": "/digital-signature/static/media/example.ab51e890.pdf",
+    "static/media/paper-plane-solid.svg": "/digital-signature/static/media/paper-plane-solid.ccd021e3.svg",
+    "static/media/search-solid.svg": "/digital-signature/static/media/search-solid.0b90b89c.svg",
+    "static/media/signature-solid.svg": "/digital-signature/static/media/signature-solid.1982a90e.svg",
+    "static/media/undo-solid.svg": "/digital-signature/static/media/undo-solid.6ffe1340.svg"
+  }
+}

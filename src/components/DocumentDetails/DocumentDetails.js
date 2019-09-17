@@ -16,7 +16,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 function DocumentDetails() {
   const [pagesCount, setPagesCount] = useState(0);
   const [signed, setSigned] = useState(false);
-  const documentTitle = 'MIF998 Engenharia de Processos - TOTVS - Sugestão de Melhoria';
+  const documentTitle = 'Contrato de trabalho';
   let signaturePad = {};
   let signaturePage = {};
 
@@ -92,9 +92,7 @@ function DocumentDetails() {
             <div className={styles.signerDetails}>
               <hr className={styles.signatureRow} />
               <p>
-                <b>Laércio Cosentino</b>
-                <br />
-                TOTVS
+                <b>Alberto da Silva</b>
               </p>
             </div>
           </div>

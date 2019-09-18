@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 const DocumentsList = React.lazy(() => import('./components/DocumentsList/DocumentsList'))
 const DocumentDetails = React.lazy(() => import('./components/DocumentDetails/DocumentDetails'))

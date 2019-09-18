@@ -140,12 +140,10 @@ function DocumentsList(props) {
     }
 
     filterResults(activeMenu);
-    
-    window.history.pushState(``, ``, `/documents/${activeMenu}`);
   }, [activeMenu]);
 
   const openDocument = documentLink => {
-    window.open(`${window.location.origin}/document/detail/${documentLink}`);
+    props.history.push(`/document/detail/${documentLink}`);
   }
 
   // const searchDocuments = query => { }
